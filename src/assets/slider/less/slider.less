@@ -1,0 +1,104 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6, ul, li, a, p, div {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: normal;
+    list-style: none;
+    color: #000;
+}
+
+.wrapper {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    .slider-container {
+        position: relative;
+        margin: 20px auto;
+        width: 800px;
+        height: 400px;
+        background-color: #000;
+        overflow: hidden;
+
+        .slider-row {
+            position: absolute;
+            height: 100%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            transition: 0.5s;
+
+        .slide {
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+      }
+        .nav-bar {
+            position: absolute;
+            bottom: 5%;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        
+            .nav-butt {
+                display: table;
+                margin: 0 auto;
+                cursor: pointer;
+                user-select: none;
+        
+                .but {
+                    text-decoration: none;
+                    display:inline;
+                    color: #ff004c;
+                    margin: 5px;
+                    padding: 10px 13px;
+                    border: 1px solid #555;
+                    border-radius: 100%;
+                    background-color: rgba(0,0,0,0.2);
+
+                    &:hover {
+                        color: #111;
+                        background-color: rgba(0,0,0,0.3);
+                    }
+
+                    &.active {
+                        color: #111;
+                        background-color: rgba(0,0,0,0.3);
+                    }
+                }
+            }
+        }
+        .arrow {
+            text-decoration: none;
+            text-align: center;
+            text-transform: capitalize;
+            color: #555;
+            position: absolute;
+            top: 190px;
+            border: 1px solid #555;
+            padding: 5px 15px;
+            background-color: rgba(0,0,0,0.2);
+            cursor: pointer;
+            user-select: none;
+    
+            &:hover {
+                color: #111;
+                background-color: rgba(0,0,0,0.3);
+            }
+            &.next {
+                right: 0;
+            }
+            &.prev {
+                left: 0px;
+            }
+        }
+    }
+}
