@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <SliderComponent/>
+    <SliderComponent :products="products"/>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
@@ -15,6 +15,14 @@ export default {
   components: {
     HelloWorld,
     SliderComponent
+  },
+  computed: {
+    products () {
+        return this.$store.getters['getProducts'];
+    },
+  },
+  created: function () {
+    this.$store.dispatch('fetchProducts');
   }
 }
 </script>
@@ -30,3 +38,4 @@ export default {
 }
 @import './assets/style/style.less';
 </style>
+
